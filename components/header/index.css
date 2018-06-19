@@ -1,0 +1,14 @@
+.header{
+    font-size: 45px;
+    padding: 10px;
+    height: 5rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    background-color:red;
+}
+
+*{
+    height: 5rem;
+}
