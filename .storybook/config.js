@@ -9,6 +9,8 @@ function loadStories() {
   require('../stories/header.js');
   require('../stories/footer.js');
   require('../stories/navigation.js');
+  require('../stories/hyperlinkButton');
+  
 }
 
 configure(loadStories, module);
