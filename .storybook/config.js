@@ -10,7 +10,8 @@ function loadStories() {
   require('../stories/footer.js');
   require('../stories/navigation.js');
   require('../stories/hyperlinkButton');
-  
+  require('../stories/hyperlinkButton');
+  require('../stories/table');
 }
 
 configure(loadStories, module);
