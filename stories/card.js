@@ -9,7 +9,7 @@ import beers from './beers.json';
 const cardStory = storiesOf('Card', module);
 
 cardStory.add('simple', () => (
-  <Card imgUrl='https://images.punkapi.com/v2/2.png' name='PIvo' tagline='Naše pivo'></Card>
+  <Card imgUrl='https://images.punkapi.com/v2/2.png' name='Naziv pive' tagline='Opis pive'></Card>
 ));
 
 cardStory.add('allBeers', () => {
