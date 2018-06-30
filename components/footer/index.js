@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import fontAwesomeStyles from './font-awesome.min.css';
 import styles from './index.css';
+import { SocialIcon } from 'react-social-icons';
 
 export default class Footer extends React.Component {
   render() {
     return (
       <div className={styles.footer}>
-      {this.props.children}
-      <a href="#" className={styles.fa-facebook}></a>
-      <a href="#" className={styles.fa-twitter}></a>
-      <a href="#" className={styles.fa-google}></a>
-      <a href="#" className={styles.fa-linkedin}></a>
+          {this.props.children}
+          <SocialIcon url="http://twitter.com" />
+          <SocialIcon url="http://google.com" />
+          <SocialIcon url="http://facebook.com" />
+          <SocialIcon url="http://instagram.com" />
+          <SocialIcon url="http://linkedin.com" />
       </div>
     )
   }
