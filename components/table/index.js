@@ -6,14 +6,14 @@ export default class Table extends React.Component {
   render() {
 
       return (
-          <table>
+          <table className={styles.table1}>
               <tbody>
               <tr key="RowHeader">
-                {this.props.headerArray.map((header,index) => (<th key={"HeaderContent"+index}>{header.content}</th>))} 
+                {this.props.headerArray.map((header,index) => (<th key={"HeaderContent"+index}>{header}</th>))} 
               </tr>
               {this.props.dataArray.map((row,rowIndex) => (
                   <tr key={"DataRow"+rowIndex}>
-                       {row.map((data,index) => (<td key={"DataRowContent"+rowIndex}>{data.content}</td>))} 
+                       {row.map((data,index) => (<td key={"DataRowContent"+rowIndex}>{data}</td>))} 
                   </tr>
               ))}
             </tbody>
@@ -24,7 +24,7 @@ export default class Table extends React.Component {
 }
 
 Table.propTypes = {
-  headerArray:PropTypes.array,
-  dataArray:PropTypes.array,
+  headerArray: PropTypes.array,
+  dataArray: PropTypes.array
 };
 

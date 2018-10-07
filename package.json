@@ -1,7 +1,6 @@
 {
-  "name": "storybook-project",
+  "name": "ivanciceksstorybook",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "build": "^0.1.4",
@@ -41,5 +40,6 @@
   "bugs": {
     "url": "https://github.com/DavidAbram/storybook-project/issues"
   },
-  "homepage": "https://github.com/DavidAbram/storybook-project#readme"
+  "homepage": "https://github.com/DavidAbram/storybook-project#readme",
+  "description": ""
 }
