@@ -25,6 +25,6 @@ export default class Table extends React.Component {
 
 Table.propTypes = {
   headerArray: PropTypes.array,
-  dataArray: PropTypes.array
+  dataArray: PropTypes.array,
 };
 
