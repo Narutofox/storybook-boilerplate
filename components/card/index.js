@@ -12,6 +12,12 @@ export default class Card extends React.Component {
                   <h4>{this.props.name}</h4>
                   <p>{this.props.tagline}</p>
               </div>
+              <button onClick={this.props.onStarClick} className={styles.favoriteIcon}>
+                <img src=""/>
+            </button>
+            <button onClick={this.props.onPlusClick} className={styles.plusIcon} >
+                <img src=""/>
+            </button>
           </div>
       )
     }
