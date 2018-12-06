@@ -1,29 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.css';
-import info from '../../content/icons/PNG/info.png'
-import plus from '../../content/icons/PNG/plus.png'
-import starFull from '../../content/icons/PNG/star-full.png'
-import starEmpty from '../../content/icons/PNG/star-empty.png'
+import info from '../../content/icons/PNG/info.png';
+import plus from '../../content/icons/PNG/plus.png';
+import starFull from '../../content/icons/PNG/star-full.png';
+import starEmpty from '../../content/icons/PNG/star-empty.png';
+import RoundIconButton from '../roundIconButton';
 
 export default class Card extends React.Component {
-    getFavouriteIcon(isFavourite)
-    {
-        if(isFavourite !== undefined && isFavourite === "true")
-        { 
-            return {starFull};
-        }
-        else
-        {
-            return {starEmpty};
-        }        
-    }
 
-    render() 
+  getFavouriteIcon (isFavourite)
+  {
+    if (isFavourite !== undefined && isFavourite === 'true')
     {
-      return (
+      return { starFull };
+    }
+    return { starEmpty };
+  }
+
+  render()
+  {
+    return (
           <div className={styles.card}>
-              <img src={this.props.imgUrl} style={{maxWidth: '200px',maxHeight: '200px'}}/>
+              <img src={this.props.imgUrl} style={{ maxWidth: '200px', maxHeight: '200px' }}/>
               <div className={styles.cardStar}>
                     <RoundIconButton imageLink={this.getFavouriteIcon(this.props.isFavourite)} onClick={this.props.onStarClick}/>
               </div>
@@ -36,13 +35,25 @@ export default class Card extends React.Component {
                   <p>{this.props.tagline}</p>
               </div>
           </div>
-      )
-    }
+    );
   }
+}
 
-  Card.PropTypes={
-      imgUrl: String,
-      name: String,
-      tagline: String
-  };
-  
+
+Card.defaultProps = {
+  imgUrl: '',
+  name: '',
+  tagline: '',
+  isFavourite: false,
+  onInfoClick: undefined,
+  onPlusClick: undefined,
+};
+
+Card.propTypes = {
+  imgUrl: PropTypes.string,
+  name: PropTypes.string,
+  tagline: PropTypes.string,
+  isFavourite: PropTypes.bool,
+  onInfoClick: PropTypes.func,
+  onPlusClick: PropTypes.func,
+};
