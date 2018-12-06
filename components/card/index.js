@@ -47,6 +47,7 @@ Card.defaultProps = {
   isFavourite: false,
   onInfoClick: undefined,
   onPlusClick: undefined,
+  onStarClick: undefined
 };
 
 Card.propTypes = {
@@ -56,4 +57,5 @@ Card.propTypes = {
   isFavourite: PropTypes.bool,
   onInfoClick: PropTypes.func,
   onPlusClick: PropTypes.func,
+  onStarClick: PropTypes.func
 };
