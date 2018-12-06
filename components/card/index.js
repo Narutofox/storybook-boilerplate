@@ -8,18 +8,17 @@ import starEmpty from '../../content/icons/PNG/star-empty.png';
 import RoundIconButton from '../roundIconButton';
 
 export default class Card extends React.Component {
-
-  getFavouriteIcon (isFavourite)
-  {
-    if (isFavourite !== undefined && isFavourite === 'true')
-    {
+  // eslint-disable-next-line class-methods-use-this
+  getFavouriteIcon(isFavourite) {
+    if (isFavourite !== undefined && isFavourite === 'true') {
       return { starFull };
     }
     return { starEmpty };
   }
 
-  render()
-  {
+  render() {
+    
+
     return (
           <div className={styles.card}>
               <img src={this.props.imgUrl} style={{ maxWidth: '200px', maxHeight: '200px' }}/>

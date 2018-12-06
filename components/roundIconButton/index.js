@@ -5,7 +5,7 @@ import styles from './index.css';
 export default class RoundIconButton extends React.Component {
   render() {
     return (
-        <button onClick={this.props.onClick} className={styles.roundIconButton}  disabled={this.props.disabled}>
+        <button onClick={this.props.onClick} className={styles.roundIconButton} disabled={this.props.disabled}>
              <img src={this.props.imageLink}/>
         </button>
     );
