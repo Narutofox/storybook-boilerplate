@@ -29,11 +29,12 @@
 }
 .cardActions{
     overflow: hidden;
+    min-height: 3em;
 }
 
 .cardActionsLeft{
     float: left;
-    max-width: 10em;
+    max-width: 10em; 
 }
 .cardActionsRight{
     float: right;
