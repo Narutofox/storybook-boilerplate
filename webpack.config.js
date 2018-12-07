@@ -37,20 +37,14 @@ module.exports = {
         }
       },
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-0'],
-          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-        }
-      },
-      {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[hash]-[name].[ext]'
+		      }
+        }]
       }
     ]
   },
@@ -60,6 +54,6 @@ module.exports = {
     'react-dom'
   ],
   plugins: [
-    new UglifyJsPlugin({ minimize: true }),
+    new UglifyJsPlugin({ minimize: true })
   ]
 };

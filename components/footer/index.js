@@ -19,5 +19,5 @@ export default class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  children:PropTypes.node
+  children: PropTypes.node
 };

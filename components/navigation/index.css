@@ -1,7 +1,8 @@
 .navigation{
-    background-color: #333;
+    background-color: blue;
     overflow: hidden;
     height: 3rem;
+    width: 100%;
 }
 
 
@@ -18,12 +19,12 @@
 
 /* Change the color of links on hover */
 .navigation a:hover {
-    background-color: #ddd;
+    background-color: blueviolet;
     color: black;
 }
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #4CAF50;
+    background-color:purple;
     color: white;
 }

@@ -7,20 +7,16 @@ import Main from '../components/main';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Navigation from '../components/navigation';
+
 const mainStory = storiesOf('Main', module);
 
-mainStory.add('with text', () => {
-  return <Main>fgfdgfd</Main>;
-});
+mainStory.add('with text', () => <Main>fgfdgfd</Main>);
 
-mainStory.add('header nav footer', () => {
-  return (
+mainStory.add('header nav footer', () => (
     <div>
-        <Header><img src="https://www.maxpixel.net/static/photo/2x/Luck-Letters-Data-Table-Las-Vegas-Numbers-Games-2097929.jpg"/></Header>
+        <Header text="Duff Bear" imgUrl="https://www.maxpixel.net/static/photo/2x/Luck-Letters-Data-Table-Las-Vegas-Numbers-Games-2097929.jpg"></Header>
         <Navigation></Navigation>
         <Footer>Ivan Čiček &copy; 2018</Footer>
     </div>
-);
-});
-
+));
 
