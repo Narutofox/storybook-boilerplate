@@ -4,7 +4,7 @@ import styles from './index.css';
 
 export default class Button extends React.Component {
   render() {
-    return <input onClick={this.props.onClick} className={styles.button} disabled={this.props.disabled} type='button' value={this.props.text} />;
+    return <input onClick={this.props.onClick} className={styles.button} disabled={this.props.disabled} type='button' value={this.props.text}>{this.props.children}</input>;
   }
 }
 
@@ -12,4 +12,5 @@ Button.propTypes = {
   text: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
+  children: PropTypes.node
 };
