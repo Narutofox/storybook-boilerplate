@@ -16,3 +16,7 @@ headerStory.add('with image', () => {
     return <Header><img src="https://www.maxpixel.net/static/photo/2x/Luck-Letters-Data-Table-Las-Vegas-Numbers-Games-2097929.jpg"/></Header>;
   });
 
+  headerStory.add('with image and text', () => {
+    return <Header text="Duff Bear" imgUrl="https://www.maxpixel.net/static/photo/2x/Luck-Letters-Data-Table-Las-Vegas-Numbers-Games-2097929.jpg"></Header>;
+  });
+

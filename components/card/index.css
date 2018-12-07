@@ -1,13 +1,12 @@
 .card{
-   max-width: 25em;
-   box-shadow: 0 4em 8em 0 black;
+   width: 18em;
+   box-shadow: 0 1em 1em 0 black;
    text-align: center;
    height: 22em;
    background-color: transparent;
    border-radius: 1em;
    display: inline-block;
    margin: 1em;
-   min-width: 18em;
 }
 
 .container{
@@ -26,6 +25,7 @@
 
 .cardTagline{
     height: unset !important;
+    max-width: 15em;
 }
 .cardActions{
     overflow: hidden;
@@ -38,4 +38,9 @@
 .cardActionsRight{
     float: right;
     max-width: 10em;
+}
+.cardDescription{
+    text-align: center;
+    align-content: center;
+    align-items: center;
 }

@@ -29,7 +29,7 @@ export default class Card extends React.Component {
                 </div>
               </div>
               <img src={this.props.imgUrl} className={styles.cardImage}/>
-              <div>
+              <div className={styles.cardDescription}>
                   <h4 className={styles.cardTitle}>{this.props.name}</h4>
                   <p className={styles.cardTagline}>{this.props.tagline}</p>
               </div>

@@ -3,12 +3,14 @@
     padding: 10px;
     height: 5rem;
     width: 100%;
-    position: relative;
     text-align: center;
     align-content: center;
-    background-color:red;
+    background-color:blueviolet;
+    overflow: hidden;
 }
 
-*{
-    height: 5rem;
+.header img{
+    max-width: 5em;
+    max-height: 1.5em;
+    margin-left: 1em;
 }
