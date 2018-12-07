@@ -1,15 +1,41 @@
 .card{
-   max-width: 250px;
+   max-width: 25em;
    box-shadow: 0 4em 8em 0 black;
    text-align: center;
-   height: 15em;
+   height: 22em;
    background-color: transparent;
    border-radius: 1em;
    display: inline-block;
+   margin: 1em;
+   min-width: 18em;
 }
 
 .container{
-    padding: 2px 16px;
     background-color: transparent;
 }
 
+.cardImage{
+    max-width: 8em;
+    max-height: 8em;
+    height: unset !important;
+}
+
+.cardTitle{
+    max-height: 1rem !important;
+}
+
+.cardTagline{
+    height: unset !important;
+}
+.cardActions{
+    overflow: hidden;
+}
+
+.cardActionsLeft{
+    float: left;
+    max-width: 10em;
+}
+.cardActionsRight{
+    float: right;
+    max-width: 10em;
+}

@@ -18,8 +18,8 @@ module.exports = {
         modules: true,
         localIdentName: '[name]__[local]___[hash:base64:5]'
       }
-    }
-	{
+    },
+	  {
         test: /\.(jpe?g|png|gif|svg)$/i,  
         use: [{
             loader: 'url-loader',

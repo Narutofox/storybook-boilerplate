@@ -5,15 +5,14 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 50%;
-    background-color: #4CAF50;
-    box-shadow: 0 9px #999;
-    max-width: 80px;
-    max-height: 60px;
+    background-color: transparent;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .roundIconButton img{
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 35px;
+    max-height: 35px;
 }
 
 .roundIconButton:disabled {
@@ -23,7 +22,7 @@
   }
   
   .roundIconButton:hover {
-    background-color: #3e8e41
+    box-shadow: 0 9px #999;
   }
   
   .roundIconButton:enabled:active {

@@ -11,27 +11,27 @@ export default class Card extends React.Component {
   // eslint-disable-next-line class-methods-use-this
   getFavouriteIcon(isFavourite) {
     if (isFavourite !== undefined && isFavourite === 'true') {
-      return { starFull };
+      return starFull;
     }
-    return { starEmpty };
+    return starEmpty;
   }
 
   render() {
-    
-
     return (
           <div className={styles.card}>
-              <img src={this.props.imgUrl} style={{ maxWidth: '200px', maxHeight: '200px' }}/>
-              <div className={styles.cardStar}>
-                    <RoundIconButton imageLink={this.getFavouriteIcon(this.props.isFavourite)} onClick={this.props.onStarClick}/>
-              </div>
-                <div className={styles.cardActions}>
-                    <RoundIconButton imageLink={info} onClick={this.props.onInfoClick}/>
-                    <RoundIconButton imageLink={plus} onClick={this.props.onPlusClick}/>
+              <div className={styles.cardActions}>
+                <div className={styles.cardActionsLeft}>
+                  <RoundIconButton imageLink={this.getFavouriteIcon(this.props.isFavourite)} onClick={this.props.onStarClick}/>
                 </div>
-              <div className={styles.container}>
-                  <h4>{this.props.name}</h4>
-                  <p>{this.props.tagline}</p>
+                <div className={styles.cardActionsRight}>
+                      <RoundIconButton imageLink={info} onClick={this.props.onInfoClick}/>
+                      <RoundIconButton imageLink={plus} onClick={this.props.onPlusClick}/>
+                </div>
+              </div>
+              <img src={this.props.imgUrl} className={styles.cardImage}/>
+              <div>
+                  <h4 className={styles.cardTitle}>{this.props.name}</h4>
+                  <p className={styles.cardTagline}>{this.props.tagline}</p>
               </div>
           </div>
     );
