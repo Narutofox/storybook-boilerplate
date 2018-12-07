@@ -15,7 +15,7 @@ footerStory.add('with text', () => {
 footerStory.add('Header & Footer', () => {
     return (
         <div>
-            <Header><img src="https://www.maxpixel.net/static/photo/2x/Luck-Letters-Data-Table-Las-Vegas-Numbers-Games-2097929.jpg"/></Header>
+            <Header text="Duff Bear" imgUrl="https://www.maxpixel.net/static/photo/2x/Luck-Letters-Data-Table-Las-Vegas-Numbers-Games-2097929.jpg"></Header>
             <Footer><p>Ivan Čiček &copy; 2018</p></Footer>
         </div>
     );
