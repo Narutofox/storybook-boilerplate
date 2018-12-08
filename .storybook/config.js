@@ -11,6 +11,7 @@ function loadStories() {
   require('../stories/navigation.js');
   require('../stories/hyperlinkButton');
   require('../stories/table');
+  require('../stories/beerModal');
 }
 
 configure(loadStories, module);
