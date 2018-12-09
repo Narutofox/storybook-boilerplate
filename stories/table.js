@@ -4,11 +4,13 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 /* eslint-enable */
 import Table from '../components/table';
+import close from '../content/icons/PNG/cancel-circle.png';
 
 const tableStory = storiesOf('Table', module);
 
 tableStory.add('example', () => {
   const headers = ['Name', 'Position', 'Office', 'Ext', 'Start', 'Salary'];
+  const actions = [[{ ImageUrl: close, Alt: 'Delete', OnClick: action('img delete') }]];
   const dataSet = [
     ['Tiger Nixon', 'System Architect', 'Edinburgh', '5421', '2011/04/25', '$320,800'],
     ['Garrett Winters', 'Accountant', 'Tokyo', '8422', '2011/07/25', '$170,750'],
@@ -47,7 +49,7 @@ tableStory.add('example', () => {
     ['Martena Mccray', 'Post-Sales support', 'Edinburgh', '8240', '2011/03/09', '$324,050'],
     ['Unity Butler', 'Marketing Designer', 'San Francisco', '5384', '2009/12/09', '$85,675']
   ];
-  return <Table headerArray={headers} dataArray ={dataSet}></Table>;
+  return <Table headerArray={headers} dataArray ={dataSet} actionsArray={actions}></Table>;
 });
 
 /*

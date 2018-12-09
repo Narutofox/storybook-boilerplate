@@ -3,6 +3,20 @@ import PropTypes from 'prop-types';
 import styles from './index.css';
 
 export default class Table extends React.Component {
+  renderActions() {
+    if (this.props.actionsArray !== undefined) {
+      return (
+        this.props.actionsArray.map((row, rowIndex) => (
+          row.map((data, index) =>
+            (
+                 <td key={`DataRowContent${rowIndex}`}>
+                   <img src={data.ImageUrl} alt={data.Alt} onClick={data.OnClick} ></img>
+                 </td>
+            ))          
+        ))
+      );
+    }
+  }
   render() {
     return (
           <table className={styles.table1}>
@@ -13,8 +27,10 @@ export default class Table extends React.Component {
               {this.props.dataArray.map((row, rowIndex) => (
                   <tr key={`DataRow${rowIndex}`}>
                        {row.map((data, index) => (<td key={`DataRowContent${rowIndex}`}>{data}</td>))}
+                       {this.renderActions()}
                   </tr>
               ))}
+
             </tbody>
         </table>
     );
@@ -23,6 +39,7 @@ export default class Table extends React.Component {
 
 Table.propTypes = {
   headerArray: PropTypes.array,
-  dataArray: PropTypes.array
+  dataArray: PropTypes.array,
+  actionsArray: PropTypes.array
 };
 
