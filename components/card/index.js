@@ -10,7 +10,7 @@ import RoundIconButton from '../roundIconButton';
 export default class Card extends React.Component {
   // eslint-disable-next-line class-methods-use-this
   getFavouriteIcon(isFavourite) {
-    if (isFavourite !== undefined && isFavourite === 'true') {
+    if (isFavourite !== undefined && isFavourite === true) {
       return starFull;
     }
     return starEmpty;
