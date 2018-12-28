@@ -4,7 +4,7 @@ import styles from './index.css';
 
 export default class Navigation extends React.Component {
   render() {
-    if (this.props.links == null || this.props.links == undefined) {
+    if (this.props.links === null || this.props.links === undefined) {
       return (
         <nav className={styles.navigation}>
               <a href="#" className={styles.active}>Home</a>
