@@ -18,7 +18,7 @@ export default class BeerModal extends React.Component {
         <div className={style.modal}>
           <div className={style.modalHeader}>
             <div className={style.modalHeaderLeft}>
-              <span>{this.props.beerName}</span>
+              <span className={style.title}>{this.props.beerName}</span>
             </div>
             <div className={style.modalHeaderRight}>
               <RoundIconButton imageLink={close} onClick={this.props.onClose} ></RoundIconButton>

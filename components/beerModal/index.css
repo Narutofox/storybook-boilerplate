@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999999;
-  };
+  }
 
   .backdrop {
     position: 'fixed';
@@ -23,14 +23,17 @@
     right: 0px;
     background-color: 'rgba(0,0,0,0.3)';
     padding: 50px;
-  };
+  }
 
   .modalHeaderLeft{
     float: left;
+    width: 80%;
   }
 
   .modalHeaderRight{
     float: right;
+    min-height: 2.8em;
+    width: 10%;
   }
 
   .modalHeader{
@@ -57,4 +60,8 @@
   .modalBody{
     overflow: hidden;
     margin-bottom: 3em;
+  }
+
+  .title{
+    font-weight: bold; 
   }
