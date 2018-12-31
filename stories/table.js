@@ -21,6 +21,6 @@ tableStory.add('example', () => {
     [{ inputType: 'number', inputValue: '7', inputChange: action('inputChange') }, { value: 'System Architect' },
       { value: 'Edinburgh' }, { value: '5421' }, { value: '2011/04/25' }, { value: '$320,800' }]
   ];
-  return <Table headerArray={headers} tableBodyData ={tableBodyData} actionsArray={actions}></Table>;
+  return <Table headerArray={headers} tableBodyData ={tableBodyData} actionsArray={actions}></Table>
 });
 
