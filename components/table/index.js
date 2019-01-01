@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.css';
-
+import RoundIconButton from '../roundIconButton'
 export default class Table extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +22,10 @@ export default class Table extends React.Component {
       } else if (tableBodyData.inputType !== '' && tableBodyData.inputType !== null && tableBodyData.inputType !== undefined) {
         return (
            <input type={tableBodyData.inputType} pattern={tableBodyData.inputPattern} defaultValue={tableBodyData.inputValue} onChange={tableBodyData.inputChange}/>);
+      } else if (tableBodyData.actions !== null && tableBodyData.actions !== undefined) {
+        const tableActions = tableBodyData.actions.map((action, index) => (
+          <RoundIconButton key={index} imageLink={action.ImageUrl} onClick={action.OnClick} ></RoundIconButton>));
+        return tableActions;
       }
     }
   }
@@ -48,16 +52,19 @@ export default class Table extends React.Component {
 
 Table.propTypes = {
   headerArray: PropTypes.array,
-  actionsArray: PropTypes.array,
   renderTableData: PropTypes.func,
   tableBodyData: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape([{
     value: PropTypes.string,
     image_url: PropTypes.string,
-    image_alt: PropTypes.string,
     inputType: PropTypes.string,
     inputPattern: PropTypes.string,
     inputValue: PropTypes.string,
-    inputChange: PropTypes.func
+    inputChange: PropTypes.func,
+    actions: PropTypes.arrayOf(PropTypes.shape([{
+      ImageUrl: PropTypes.string,
+      Alt: PropTypes.string,
+      OnClick: PropTypes.func
+    }]))
   }])))
 };
 
