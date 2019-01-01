@@ -48,13 +48,13 @@ Table.propTypes = {
   headerArray: PropTypes.array,
   actionsArray: PropTypes.array,
   renderTableData: PropTypes.func,
-  tableBodyData: PropTypes.arrayOf(PropTypes.shape([{
+  tableBodyData: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape([{
     value: PropTypes.string,
     image_url: PropTypes.string,
     image_alt: PropTypes.string,
     inputType: PropTypes.string,
     inputValue: PropTypes.string,
     inputChange: PropTypes.func
-  }]))
+  }])))
 };
 
