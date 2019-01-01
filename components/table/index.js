@@ -21,21 +21,23 @@ export default class Table extends React.Component {
           <img src={tableBodyData.image_url} alt={tableBodyData.image_alt} style={ imgStyle }/>);
       } else if (tableBodyData.inputType !== '' && tableBodyData.inputType !== null && tableBodyData.inputType !== undefined) {
         return (
-           <input type={tableBodyData.inputType} value={tableBodyData.inputValue} onChange={tableBodyData.inputChange}/>);
+           <input type={tableBodyData.inputType} pattern={tableBodyData.inputPattern} defaultValue={tableBodyData.inputValue} onChange={tableBodyData.inputChange}/>);
       }
     }
   }
   render() {
     return (
-          <table className={styles.table1}>
+          <table className={`${styles.table} ${styles.tableBordered}`}>
+            <thead>
+            <tr key="RowHeader">
+                {this.props.headerArray.map((header, index) => (<th scope="col" key={`HeaderContent${index}`}>{header}</th>))}
+            </tr>
+          </thead>
               <tbody>
-              <tr key="RowHeader">
-                {this.props.headerArray.map((header, index) => (<th key={`HeaderContent${index}`}>{header}</th>))}
-              </tr>
               {this.props.tableBodyData.map((row, rowIndex) => (
                   <tr key={`DataRow${rowIndex}`}>
                     {row.map((data, index) =>
-                    <td key={`DataRowContent${index}`}>{ this.renderTableData(data)} </td>)}
+                    <td scope="row" key={`DataRowContent${index}`}>{ this.renderTableData(data)} </td>)}
                   </tr>
               ))}
             </tbody>
@@ -53,6 +55,7 @@ Table.propTypes = {
     image_url: PropTypes.string,
     image_alt: PropTypes.string,
     inputType: PropTypes.string,
+    inputPattern: PropTypes.string,
     inputValue: PropTypes.string,
     inputChange: PropTypes.func
   }])))

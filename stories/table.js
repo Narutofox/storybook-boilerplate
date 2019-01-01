@@ -5,8 +5,26 @@ import { action } from '@storybook/addon-actions';
 /* eslint-enable */
 import Table from '../components/table';
 import close from '../content/icons/PNG/cancel-circle.png';
+import beers from './beers.json';
 
 const tableStory = storiesOf('Table', module);
+
+function setBeerInCart(beerId, event) {
+  alert(beerId);
+  alert(event.target.value);
+}
+
+function beerToDataSet(beer) {
+  return (
+    [
+      { image_url: beer.image_url, image_alt: beer.name },
+      { value: beer.name },
+      {
+        inputValue: 1, inputType: 'text', inputPattern: '[0-9]*', inputChange: setBeerInCart.bind(this, beer.id)
+      }
+    ]
+  );
+}
 
 tableStory.add('example', () => {
   const headers = ['Name', 'Position', 'Office', 'Ext', 'Start', 'Salary'];
@@ -21,6 +39,13 @@ tableStory.add('example', () => {
     [{ inputType: 'number', inputValue: '7', inputChange: action('inputChange') }, { value: 'System Architect' },
       { value: 'Edinburgh' }, { value: '5421' }, { value: '2011/04/25' }, { value: '$320,800' }]
   ];
-  return <Table headerArray={headers} tableBodyData ={tableBodyData} actionsArray={actions}></Table>
+  return <Table headerArray={headers} tableBodyData ={tableBodyData} actionsArray={actions}></Table>;
 });
 
+tableStory.add('beers', () => {
+  const headers = ['', 'Name', 'Quantity'];
+  const actions = [[{ ImageUrl: close, Alt: 'Delete', OnClick: action('img delete') }]];
+  const dataSet = beers.map(beer => beerToDataSet(beer));
+
+  return <Table headerArray={headers} tableBodyData ={dataSet} actionsArray={actions}></Table>;
+});
