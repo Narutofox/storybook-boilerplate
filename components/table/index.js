@@ -62,7 +62,6 @@ Table.propTypes = {
     inputChange: PropTypes.func,
     actions: PropTypes.arrayOf(PropTypes.shape([{
       ImageUrl: PropTypes.string,
-      Alt: PropTypes.string,
       OnClick: PropTypes.func
     }]))
   }])))

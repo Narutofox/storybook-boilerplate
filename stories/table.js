@@ -53,8 +53,7 @@ tableStory.add('example', () => {
 
 tableStory.add('beers', () => {
   const headers = ['', 'Name', 'Quantity'];
-  const actions = [[{ ImageUrl: close, Alt: 'Delete', OnClick: action('img delete') }]];
   const dataSet = beers.map(beer => beerToDataSet(beer));
 
-  return <Table headerArray={headers} tableBodyData ={dataSet} actionsArray={actions}></Table>;
+  return <Table headerArray={headers} tableBodyData ={dataSet}></Table>;
 });
