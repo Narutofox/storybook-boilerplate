@@ -37,7 +37,7 @@ export default class BeerModal extends React.Component {
           <div className={style.modalFooter}>
             <Button onClick={this.props.onClose} text="Close" >
             </Button>
-            <Button onClick={() => { this.props.markBeerAsFavorite(this.props.beerId); }} text="Mark beer as favorite">
+            <Button onClick={() => { this.props.markBeerAsFavorite(this.props.beerId); }} text={this.favoriteButtonText() }>
             </Button>
             <Button onClick={() => this.props.addBeerToCart(this.props.beerId)} text="Add beer To Cart">
             </Button>
@@ -46,6 +46,13 @@ export default class BeerModal extends React.Component {
       </div>
     );
   }
+
+  favoriteButtonText() {
+    if (this.props.isFavorite) {
+      return 'Remove beer from favorites';
+    }
+    return 'Add beer to favorites';
+  }
 }
 
 BeerModal.defaultProps = {
@@ -53,7 +60,8 @@ BeerModal.defaultProps = {
   show: false,
   imgUrl: '',
   beerDescription: '',
-  beerId: -1
+  beerId: -1,
+  isFavorite: false
 };
 
 BeerModal.propTypes = {
@@ -64,5 +72,6 @@ BeerModal.propTypes = {
   beerDescription: PropTypes.string,
   markBeerAsFavorite: PropTypes.func.isRequired,
   addBeerToCart: PropTypes.func.isRequired,
-  beerId: PropTypes.number
+  beerId: PropTypes.number,
+  isFavorite: PropTypes.bool
 };

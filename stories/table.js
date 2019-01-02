@@ -25,7 +25,7 @@ function beerToDataSet(beer) {
         inputPattern: '[0-9]*',
         inputChange: setBeerInCart.bind(this, beer.id)
       },
-      { actions: [{ ImageUrl: close, Alt: 'Delete', OnClick: action('img delete') }] }
+      { actions: [{ ImageUrl: close, OnClick: action('img delete') }] }
     ]
   );
 }
